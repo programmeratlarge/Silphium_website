@@ -1,0 +1,21 @@
+@import "tailwindcss";
+
+@theme {
+  /* ── Brand palette ─────────────────────────────────────────────────────── */
+  --color-silphium-red: #7b1d2e;
+  --color-silphium-orange: #c26a35;
+  --color-silphium-cream: #f8f4ee;
+  --color-silphium-charcoal: #1c1c1e;
+  --color-silphium-muted: #6e6e73;
+
+  /* ── Typography ────────────────────────────────────────────────────────── */
+  --font-sans: var(--font-geist-sans);
+  --font-display: var(--font-playfair);
+  --font-mono: var(--font-geist-mono);
+}
+
+body {
+  background-color: #ffffff;
+  color: var(--color-silphium-charcoal);
+  font-family: var(--font-sans), system-ui, sans-serif;
+}
