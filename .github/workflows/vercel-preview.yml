@@ -46,5 +46,12 @@ jobs:
       - name: Build project artifacts
         run: vercel build --token=${{ secrets.VERCEL_TOKEN }}
 
+      - name: Inspect build output
+        run: |
+          echo "=== .vercel/output/config.json ==="
+          cat .vercel/output/config.json || echo "(not found)"
+          echo "=== .vercel/output/ top-level ==="
+          ls -la .vercel/output/ || echo "(empty)"
+
       - name: Deploy preview to Vercel
         run: vercel deploy --prebuilt --token=${{ secrets.VERCEL_TOKEN }}
